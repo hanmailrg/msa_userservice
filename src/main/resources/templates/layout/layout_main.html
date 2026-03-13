@@ -543,14 +543,14 @@
 			const token = document.querySelector("meta[name='_csrf']").getAttribute("content");
 		    const header = document.querySelector("meta[name='_csrf_header']").getAttribute("content");
 
-		    fetch("http://localhost:8000/user-service/auth/logout", {
+		    fetch("http://43.203.221.254:8000/user-service/auth/logout", {
 		        method: 'POST',
 		        headers: {
 		            [header]: token
 		        }
 		    })
 		    .finally(() => {
-		        window.location.href = "http://localhost:8000/user-service/index";
+		        window.location.href = "http://43.203.221.254:8000/user-service/index";
 		        alert("로그아웃 되었습니다.");
 		    }); // finally를 사용하여 logout 성공 여부와 관계없이 항상 페이지 이동
 			
